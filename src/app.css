@@ -14,6 +14,7 @@
   --color-white: #fff;
   --color-light: #C2D1D9;
   --color-dark: #424B5A;
+  --color-primary: #C42428;
   
   --transition-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
   --transition-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
@@ -38,7 +39,7 @@
 
 
 body{
-    font-family: "Helvetica Neue LT Std", "helvetica", sans-serif;
+    font-family: franklin-gothic-urw, sans-serif; 
     transition-property: all;
     transition-timing-function: cubic-bezier(.5,0,0,1);
     transition-duration: 500ms;
