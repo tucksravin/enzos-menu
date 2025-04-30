@@ -54,15 +54,6 @@
 		text-transform: capitalize;
 	}
 
-	p{
-		color: #000;
-		font-family: franklin-gothic-urw, sans-serif;
-		font-size: 20px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: normal;
-	}
-
 	.starting-at{
 		color: #000;
 		font-family: venn-semiextended, sans-serif;
@@ -85,7 +76,7 @@
 	.footer{
 		color: #000;
 		text-align: center;
-		font-family: 'franklin-gothic-urw', sans-serif;
+		font-family: franklin-gothic-urw, sans-serif;
 		font-size: 20px;
 		font-style: normal;
 		font-weight: 500;
@@ -134,10 +125,10 @@
 				<h1 class='text-primary translate-y-[3.5px] translate-x-[0.5px]'>DETAILS</h1>
 			  </div>
 		</div>
-		<div class='flex flex-row h-full'>
-			<div class='w-3/5 flex flex-col gap-6'>
+		<div class='flex flex-row h-full mt-3'>
+			<div class='w-3/5 flex flex-col gap-8'>
 				{#each content.menu_items as item, i}
-					<div class='h-24 w-full pr-24 flex flex-row'>
+					<div class='w-full pr-24 flex flex-row'>
 						<h3 class='w-16 text-black'>{'0'+(i+1)}</h3>
 						<div class='w-full flex flex-col gap-3'>
 							<div class='flex flex-row items-center justify-between'>
@@ -170,10 +161,10 @@
 							  </svg>
 							  <div class='white-number absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 '>{'0'+(i+1)}</div>
 						</div>
-						<div class='w-full flex flex-col gap-4 pl-8'>
+						<div class='w-full flex flex-col gap- pl-8'>
 							<h4>{item.name}</h4>
 							<PrismicRichText field={item.description} />
-							<div class='mt-6'>
+							<div class='mt-2'>
 								<div class='starting-at'>Starting at</div>
 								<div class='flex mt-2'>
 									<div class='dollar'>$</div>
