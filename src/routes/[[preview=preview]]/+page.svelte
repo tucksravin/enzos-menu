@@ -30,8 +30,10 @@
 		}
 	}
 
+	let interval:NodeJS.Timeout;
+
 	onMount(() => {
-		const interval = setInterval(() => {
+		interval = setInterval(() => {
 			if (!isFeatureActive) {
 				nextFeature();
 			} else{
@@ -195,12 +197,12 @@
 
 <svelte:window bind:innerWidth={viewpoortWidth} />
 
-<button class='absolute top-2 right-2 z-20' onclick={()=>isFeatureActive=!isFeatureActive}><i class='fa-solid {isFeatureActive?'fa-toggle-on':'fa-toggle-off'} fa-2xl text-primary'></i></button>
-<button class='absolute bottom-2 right-2 z-20' onclick={nextFeature}><i class='fa-solid fa-arrow-right fa-2xl text-primary'></i></button>
+<button class='absolute top-2 right-2 z-20' onclick={()=>{isFeatureActive=!isFeatureActive; clearInterval(interval)}}><i class='fa-solid {isFeatureActive?'fa-toggle-on':'fa-toggle-off'} fa-2xl text-primary'></i></button>
+<button class='absolute bottom-2 right-2 z-20' onclick={()=>{nextFeature(); clearInterval(interval);}}><i class='fa-solid fa-arrow-right fa-2xl text-primary'></i></button>
 
 
 <div class='w-screen h-screen p-12 bg-white relative'>	
-	<div class='w-full h-full relative'>
+	<div class='w-full h-full relative'> 
 		{#if !isFeatureActive}
 			<div class='w-full h-full absolute bg-[#FFF6ED] flex flex-col justify-between py-8 px-16' in:fly={{x:'-100%', duration:1800, easing: quintOut}} out:fly={{x:'100%', duration:1800, easing: quintOut}}>
 				<div class='flex flex-col items-center gap-3'>
