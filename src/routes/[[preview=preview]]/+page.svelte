@@ -12,8 +12,8 @@ let { data } = $props();
 let viewpoortWidth=$state(1024)
 let content = $state(data.page.data);
  $effect(()=> {data; content = data.page.data;})
-let isFeatureActive = $state(false);
-let featuredIndex = $state(-1);
+let isFeatureActive = $state(true);
+let featuredIndex = $state(0);
 let featuredItem = $state(content.featured_items[0]);
 let showStar = $derived(featuredIndex>content.menu_items.length-1)
 
@@ -36,6 +36,9 @@ let activeStateTimeout:NodeJS.Timeout;
 
 onMount(() => {
 
+	setTimeout(() => {
+     isFeatureActive = false;
+   }, FEATURE_ACTIVE_TIME);
 
  interval = setInterval(() => {
    nextFeature();
