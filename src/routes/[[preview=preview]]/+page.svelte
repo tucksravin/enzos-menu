@@ -384,7 +384,7 @@ onMount(() => {
 				</div>
 				
 				<!-- Featured image with transition - already implemented correctly -->
-				<PrismicImage field={featuredItem?.image} class='w-1/2 h-full object-cover transition-opacity  ease-fast-slow {isFeatureActive?'opacity-100 duration-[2000ms] delay-[1800ms] ':'opacity-0 duration-[2000ms] ease-fast-slow pb-1'}'/>
+				<PrismicImage field={featuredItem?.image} class='w-1/2 h-full object-cover transition-opacity  ease-fast-slow {isFeatureActive?'opacity-100 duration-[2000ms] delay-[1800ms] ':'opacity-0 duration-[2000ms] ease-fast-slow'}'/>
 			</div>
 	</div>
 </div>
