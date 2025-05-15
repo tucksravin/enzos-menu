@@ -154,7 +154,7 @@ onMount(() => {
 
 	.feature-number{
 		font-family: franklin-gothic-urw, sans-serif;
-		font-size: 53px;
+		font-size: 44px;
 		font-style: normal;
 		font-weight: 600;
 		line-height: normal;
@@ -327,8 +327,8 @@ onMount(() => {
 					<!-- Featured item content -->
 					<div class='flex flex-row'>
 						<div>
-						<div class='overflow-hidden h-32 w-32 translate-y-2'>
-							<div class='h-32 w-32 relative transition-transform duration-[2000ms] ease-fast-slow pb-1 {isFeatureActive ? 'translate-y-0 delay-[1800ms] ' : 'translate-y-full'}'>
+						<div class='overflow-hidden h-24 w-24'>
+							<div class='h-24 w-24 relative transition-transform duration-[2000ms] ease-fast-slow pb-1 {isFeatureActive ? 'translate-y-0 delay-[1800ms] ' : 'translate-y-full'}'>
 								<!-- Star SVG with transition -->
 
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47 47" fill="none" class='{showStar?'':'opacity-0'} w-full absolute top-0 left-0'>
